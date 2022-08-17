@@ -4,37 +4,24 @@ const { DataTypes } = require("sequelize");
 module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define(
-    "Country",
+    "Activity",
     {
-      cca3: {
-        type: DataTypes.STRING,
-        primaryKey: true,
-        allowNull: false,
-      },
       name: {
         type: DataTypes.STRING,
         allowNull: false,
+        unique: true,
       },
-      flag: {
-        type: DataTypes.STRING,
+      difficulty: {
+        type: DataTypes.INTEGER,
         allowNull: false,
       },
-      continents: {
-        type: DataTypes.STRING,
+      duration: {
+        type: DataTypes.INTEGER,
         allowNull: false,
       },
-      capital: {
+      season: {
         type: DataTypes.STRING,
-        // allowNull: false,
-      },
-      subregion: {
-        type: DataTypes.STRING,
-      },
-      area: {
-        type: DataTypes.INTEGER,
-      },
-      population: {
-        type: DataTypes.INTEGER,
+        allowNull: false,
       },
     },
     { timestamps: false }
