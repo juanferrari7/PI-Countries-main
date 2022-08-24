@@ -30,13 +30,15 @@ router.get("/:id", async (req, res, next) => {
         let country = await Country.findByPk(id, {
             include: {
                 model: Activity,
-                attributes: ["name"],
+                attributes: ["name", "difficulty", "duration", "season"],
                 through: {
                     attributes: [],
                 }
             }
         })
-        res.status(200).send(country)
+        if (country) {
+          res.status(200).send(country)
+        } else res.status(404).send("Id no encontrado")
     } catch (error) {
         next(error)
     }

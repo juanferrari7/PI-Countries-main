@@ -5,7 +5,7 @@ const router = Router();
 
 router.get("/", async (req, res, next) => {
   try {
-    const activities = await Activity.findAll({include: Country})
+    const activities = await Activity.findAll()
     res.status(200).send(activities)
   } catch (error) {
       next(error)

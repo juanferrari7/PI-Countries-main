@@ -12,8 +12,16 @@ module.exports = {
                         attributes: [],
                     }
                 },
-                attributes: ["name", "cca3", "flag", "continents"]
-            })
+                attributes: ["name", "cca3", "flag", "continents", "population"]
+            });
+            countries = countries.map((el) => ({
+                name: el.name,
+                cca3: el.cca3,
+                flag: el.flag,
+                continents: el.continents,
+                population: el.population,
+                Activities: el.Activities.map((el) => el.name)
+            }))
             return countries
         } catch (error) {
             console.log(error)
