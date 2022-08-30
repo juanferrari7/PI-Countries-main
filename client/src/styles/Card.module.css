@@ -1,35 +1,42 @@
 .card {
-    text-align: center;
-    width: 230px;
-    height: 260px;
-    padding: 10px;
-    margin: 20px;
-    color: rgb(255, 255, 255);
-    box-shadow: 0px 4px 8px 0 rgba(24, 13, 1, 0.33);
-    background: linear-gradient(
-      180deg,
-      rgba(87, 90, 142, 0.488),
-      rgba(35, 35, 35,0.5)
-    );
-    /* background-color: transparent; */
-    filter: opacity(75%);
-    border-radius: 15px;
-    transition: 0.7s;
-    display: inline-block;
-  }
-  .card:hover {
-    filter: none;
-    transition: 0.7;
-  }
+  text-align: center;
+  width: 230px;
+  height: 260px;
+  padding: 10px;
+  margin: 20px;
+  color: rgb(255, 255, 255);
+  box-shadow: 0px 4px 8px 0 rgba(24, 13, 1, 0.33);
+  background: linear-gradient(
+    180deg,
+    rgba(87, 90, 142, 0.488),
+    rgba(35, 35, 35, 0.5)
+  );
+  /* background-color: transparent; */
+  filter: opacity(75%);
+  border-radius: 15px;
+  transition: 0.7s;
+  display: inline-block;
+}
+.card:hover {
+  filter: none;
+  transition: 0.7;
+}
 
-  .name {
-    color: rgb(255,255,255);
-    letter-spacing: 1px;
-    font-size: 19px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70px;
-    width: 100%;
-    margin-bottom: 0;
+.name {
+  color: rgb(255, 255, 255);
+  letter-spacing: 1px;
+  font-size: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.flag {
+  width: 92%;
+  height: 120px;
+  transition: 0.7s;
+  border-radius: 5px;
 }
