@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  background-image: url(./images/pexels-lara-jameson-8828633.jpg);
+  background-size: 100%;
+  background-position: center 45%;
+  background-repeat: no-repeat;
+  /* height: 100%;
+  width: 100%; */
+  background-attachment: fixed;
+  background-size: cover;
+}

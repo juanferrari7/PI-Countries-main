@@ -1,4 +1,6 @@
-export default function Paginate({ countriesPerPage, allCountries, paginate }) {
+import s from '../styles/Paginate.module.css'
+
+export default function Paginate({ countriesPerPage, allCountries, paginate, currentPage }) {
   const pageNumbers = [];
 
   let maxPages = 1 + Math.ceil((allCountries - 9) / countriesPerPage);
@@ -8,11 +10,11 @@ export default function Paginate({ countriesPerPage, allCountries, paginate }) {
   }
 
   return (
-    <nav>
+    <nav className={s.paginate}>
       <ul>
         {pageNumbers.map((number) => (
           <span key={number}>
-            <button onClick={() => paginate(number)}>{number}</button>
+            <button className={currentPage === number ? s.active :  s.buttons} onClick={() => paginate(number)}>{number}</button>
           </span>
         ))}
       </ul>

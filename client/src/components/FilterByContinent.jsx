@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
 import { filterByContinent } from "../redux/actions";
+import s from '../styles/Filter.module.css'
 
 export default function FilterByContinent({setCurrentPage}) {
   const dispatch = useDispatch();
@@ -7,9 +8,12 @@ export default function FilterByContinent({setCurrentPage}) {
   function handleContinent(e) {
     dispatch(filterByContinent(e.target.value));
     setCurrentPage(1)
+    document.getElementById("activityFilter").selectedIndex = 0;
+    document.getElementById("orderId").selectedIndex = 0;
+
   }
   return (
-    <select name="continent" onChange={(e) => handleContinent(e)}>
+    <select className={s.filter} id="continentFilter" name="continent" onChange={(e) => handleContinent(e)}>
       <option hidden>Filter by continent...</option>
       <option value="All">All</option>
       <option value="America">America</option>

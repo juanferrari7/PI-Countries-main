@@ -1,0 +1,25 @@
+.container {
+    padding: 0px 10px 0px 10px;
+}
+
+.search {
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px 0px 0px 10px;
+    border: none;
+}
+
+.button{
+    padding: 5.3px 10px;
+    background-color: #151b2d;
+    color: rgb(248, 247, 247);
+    border-radius: 0px 10px 10px 0px;
+    border: none;
+}
+
+.button:hover {
+    color: #151b2d;
+    background-color: rgb(248, 247, 247);
+}

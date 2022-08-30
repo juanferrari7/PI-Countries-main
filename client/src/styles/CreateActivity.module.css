@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+.button{
+    padding: 6px 10px;
+    background-color: rgb(52, 61, 0);
+    color: rgb(200, 200, 200);
+    border-radius: 10px;
+    border: none;
+}
+
+.button:hover {
+    color: rgb(52, 61, 0);
+    background-color: rgb(200, 200, 200);
+}
+
+.button:disabled {
+    background-color: rgba(211, 211, 211, 0.2);
+    color: rgba(211, 211, 211, 0.2)
+}
+
+.create {
+    margin: 40px;
+    color: white;
+    background-color: rgba(1, 25, 6, 0.5);
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+.dangerText {
+    color: crimson;
+    text-align: center;
+}
+
+.input {
+    padding: 5px;
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+}
+
+.inputContainer {
+    margin-top: 5px;
+    height: 65px;
+}

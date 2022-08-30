@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux"
 import { sortCountries } from "../redux/actions"
-
+import s from '../styles/Filter.module.css'
 
 export default function Order() {
     const dispatch = useDispatch()
@@ -8,7 +8,7 @@ export default function Order() {
         dispatch(sortCountries(e.target.value))
       }
     return (
-        <select name="sort" onChange={(e) => handleOrder(e)} placeholder="Order by">
+        <select className={s.filter} id="orderId" name="sort" onChange={(e) => handleOrder(e)} placeholder="Order by">
             <option hidden>Order by...</option>
             <option value="ASCENDENTE">A-Z</option>
             <option value="DESCENDENTE">Z-A</option>

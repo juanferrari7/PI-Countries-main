@@ -45,7 +45,7 @@ export function searchCountries(name) {
           payload: countries.data,
         });
       })
-      .catch((error) => console.log(error));
+      .catch((error) => alert(error.response.data));
   };
 }
 
