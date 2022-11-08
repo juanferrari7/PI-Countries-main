@@ -10,12 +10,12 @@ export default function SearchBar({setCurrentPage}) {
   function onInputChange(e) {
     e.preventDefault()
     setSearch(e.target.value);
-    setCurrentPage(1)
   }
-
+  
   function onSubmit(e) {
     e.preventDefault();
     dispatch(searchCountries(search));
+    setCurrentPage(1)
     setSearch("");
   }
 
